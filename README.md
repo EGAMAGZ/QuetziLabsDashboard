@@ -9,7 +9,7 @@ Requisito primordial es el contar con **Python 3.7**, debido a las versiones de 
 pip install -r requeriments.txt
 ```
 
-## Python 3.7.0
+## Python 3.8.0
 ***
 
 |   Nombre   |   pip install   |   version   |
