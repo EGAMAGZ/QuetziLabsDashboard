@@ -29,8 +29,8 @@ html,body {
     font-style: normal;
 }
 
-.qtz-text-white{
-    color: #ffffff;
+.qtz-text-color-primary{
+    color: var(--primary-color) !important;
 }
 
 .qtz-main-font{
