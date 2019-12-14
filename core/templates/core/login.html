@@ -1,23 +1,22 @@
-{% extends 'core/acces.html' %}
+{% extends 'core/access.html' %}
 
 {% load static %}
 
 {% block form-content %}
-
-        <p class="text-center font-weight-bold">Log In</p>
-        <form action="/" method="post">
-            <div class="form-group">
-                <label for="{{ form.ad_email.id_for_label }}">Email address:</label>
-                {{ form.ad_email }}
-                <small id="emailHelp" class="form-text text-muted">Only registered users can acces</small>
-                {% if form.ad_email.errors %}<small class="form-text text-danger">{{ form.ad_email.errors }}</small>{% endif %}
-            </div>
-            <div class="form-group">
-                <label for="{{ form.ad_password.id_for_label }}">Password:</label>
-                {{ form.ad_password }}
-            </div>
-            <input type="submit" value="Log In" class="btn btn-primary">
-            {% csrf_token %}
-        </form>
-
+<h2 class="text-center font-weight-bold"><i class="qtz-text-highlight-accent qtz-text-no-style p-1">Log</i> In</h2>
+<form action="/login/" method="post" class="p-5">
+    <div class="form-group">
+        <label for="{{ form.ad_email.id_for_label }}">Email address:</label>
+        {{ form.ad_email }}
+        <small id="emailHelp" class="form-text text-muted">Only registered users can acces</small>
+        {% if form.ad_email.errors %}<small class="form-text text-danger">{{ form.ad_email.errors }}</small>{% endif %}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.ad_password.id_for_label }}">Password:</label>
+        {{ form.ad_password }}
+        {% if form.ad_password.errors %}<small class="form-text text-danger">{{ form.ad_password.errors }}</small>{% endif %}
+    </div>
+    <input type="submit" value="Log In" class="btn btn-info">
+    {% csrf_token %}
+</form>
 {% endblock %}

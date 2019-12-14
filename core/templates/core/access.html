@@ -3,10 +3,13 @@
 {% load static %}
 
 {% block content %}
-<div class="d-flex flex-row align-items-stretch w-100 h-100">
+<div class="d-flex flex-row flex-md-row flex-sm-column align-items-stretch w-100 h-100">
     <div class="w-50 h-100 d-flex flex-column justify-content-center align-items-center qtz-background-primary">
         <img src="{% static 'core/img/quetziLogo.svg' %}" class="qtz-logo" alt="">
-        <p>QuetziLabDashboard</p>
+        <h1 class="qtz-main-font text-white">
+            <i class="qtz-text-highlight-accent qtz-text-no-style p-1 text-dark">Quetzi</i>Lab
+        </h1>
+        <h4 class="font-weight-light text-white">Dashboard</h4>
     </div>
     <div class="w-50 h-100 d-flex flex-column justify-content-center">
         {% block form-content %}{% endblock %}

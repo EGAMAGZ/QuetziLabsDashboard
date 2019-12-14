@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
 :root{
-    --primary-color:#323846
+    /* COLORS */
+    --primary-color:#323846;
+    --accent-color:#C3F7EB;
+    /* FONTS */
+    --main-font:'Quicksand', sans-serif
 }
 
 html,body {
@@ -9,7 +15,28 @@ html,body {
 .qtz-background-primary{
     background-color: var(--primary-color);
 }
+
+.qtz-background-accent{
+    background-color: var(--accent-color);
+}
+
 .qtz-logo{
-    width: 9rem;
-    height: 9rem;
+    width: 21rem;
+    height: 21rem;
+}
+
+.qtz-text-no-style{
+    font-style: normal;
+}
+
+.qtz-text-white{
+    color: #ffffff;
+}
+
+.qtz-main-font{
+    font-family: var(--main-font);
+}
+
+.qtz-text-highlight-accent{
+    background-color: var(--accent-color);
 }
