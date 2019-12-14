@@ -1,0 +1,15 @@
+:root{
+    --primary-color:#323846
+}
+
+html,body {
+    height: 100%;
+}
+
+.qtz-background-primary{
+    background-color: var(--primary-color);
+}
+.qtz-logo{
+    width: 9rem;
+    height: 9rem;
+}

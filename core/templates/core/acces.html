@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="d-flex flex-row align-items-stretch w-100 h-100">
+    <div class="w-50 h-100 d-flex flex-column justify-content-center align-items-center qtz-background-primary">
+        <img src="{% static 'core/img/quetziLogo.svg' %}" class="qtz-logo" alt="">
+        <p>QuetziLabDashboard</p>
+    </div>
+    <div class="w-50 h-100 d-flex flex-column justify-content-center">
+        {% block form-content %}{% endblock %}
+    </div>
+</div>
+{% endblock %}
