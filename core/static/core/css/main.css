@@ -1,42 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 
-:root{
-    /* COLORS */
-    --primary-color:#323846;
-    --accent-color:#C3F7EB;
-    /* FONTS */
-    --main-font:'Quicksand', sans-serif
+:root {
+  /* COLORS */
+  --primary-color: #323846;
+  --accent-color: #c3f7eb;
+  /* FONTS */
+  --main-font: "Quicksand", sans-serif;
 }
 
-html,body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
-.qtz-background-primary{
-    background-color: var(--primary-color);
+.qtz-background-primary {
+  background-color: var(--primary-color) !important;
 }
 
-.qtz-background-accent{
-    background-color: var(--accent-color);
+.qtz-background-accent {
+  background-color: var(--accent-color);
 }
 
-.qtz-logo{
-    width: 21rem;
-    height: 21rem;
+.qtz-logo {
+  width: 21rem;
+  height: 21rem;
 }
 
-.qtz-text-no-style{
-    font-style: normal;
+.qtz-text-no-style {
+  font-style: normal;
 }
 
-.qtz-text-color-primary{
-    color: var(--primary-color) !important;
+.qtz-text-color-primary {
+  color: var(--primary-color) !important;
 }
 
-.qtz-main-font{
-    font-family: var(--main-font);
+.qtz-main-font {
+  font-family: var(--main-font);
 }
 
-.qtz-text-highlight-accent{
-    background-color: var(--accent-color);
+.qtz-text-highlight-accent {
+  background-color: var(--accent-color);
 }

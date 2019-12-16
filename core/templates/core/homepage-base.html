@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark qtz-background-primary  my-2 mx-sm-0 mx-md-0 mx-lg-5 fixed-top rounded">
+    <a class="navbar-brand" href="{% url 'home-page' %}" class="text-white">
+        <i class="qtz-text-highlight-accent qtz-text-no-style p-1 text-dark qtz-main-font">Quetzi</i><i
+            class="text-white qtz-text-no-style qtz-main-font">Lab</i>
+        <i class="text-white qtz-text-no-style">Dashboard</i>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </div>
+    </div>
+</nav>
+
+{% block homepage-content %}{% endblock %}
+
+{% endblock %}
