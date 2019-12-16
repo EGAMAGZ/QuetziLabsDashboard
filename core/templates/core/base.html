@@ -18,7 +18,7 @@
         crossorigin="anonymous"></script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
-    <title>QuetziLabs Admin</title>
+    <title>QuetziLabs Admin {% block path %}{% endblock %}</title>
 </head>
 <body>
     {% block content %}{% endblock %}
