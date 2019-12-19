@@ -22,7 +22,11 @@ body {
 }
 
 .qtz-background-accent {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color) !important;
+}
+
+.qtz-background{
+  background-color: var(--background-color) !important;
 }
 
 .qtz-logo {
@@ -33,7 +37,7 @@ body {
 /* Text */
 
 .qtz-text-no-style {
-  font-style: normal;
+  font-style: normal !important;
 }
 
 .qtz-text-color-primary {
@@ -41,17 +45,17 @@ body {
 }
 
 .qtz-main-font {
-  font-family: var(--main-font);
+  font-family: var(--main-font) !important;
 }
 
 .qtz-text-highlight-accent {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color) !important;
 }
 
 /* Button */
 .qtz-btn-accent{
-  background-color: var(--accent-color);
+  background-color: var(--accent-color) !important;
 }
 .qtz-btn-accent:hover{
-  background-color: var(--accent-color-dark);
+  background-color: var(--accent-color-dark) !important;
 }

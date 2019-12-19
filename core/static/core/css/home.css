@@ -1,6 +1,13 @@
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transform-style: preserve-3d;
+}
+
 #header{
     background: url('../img/gray-laptop-computer-showing-html-codes-in-shallow-focus-160107.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }

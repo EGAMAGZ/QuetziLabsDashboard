@@ -6,12 +6,16 @@
 {% endblock %}
 {% block homepage-content %}
 <section id="header" class="vh-100 vw-100 d-flex align-items-end flex-column justify-content-end">
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
+    <div class="jumbotron qtz-background">
+        <h1 class="display-5 text-break">Bienvenido a QuetziLab Dashboard!</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
 </section>
+<div>
+    {% lorem 5 %}
+</div>
+<!-- {% lorem 5 %} -->
 {% endblock %}

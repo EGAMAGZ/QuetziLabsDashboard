@@ -18,4 +18,7 @@ def login(request):
     return render(request,'core/login.html',{'form':form})
 
 def register(request):
-    return render(request,'core/base.html')
+    return render(request,'core/register.html')
+
+def contact(request):
+    return render(request,'core/contact.html')
