@@ -16,9 +16,22 @@ def login(request):
     if(request.method=="POST"):
         form=LoginForm(request.POST)
         if(form.is_valid()):
+            if(form.cleaned_data['ad_remember']):
+                request.session['qtz-email-storage']=form.cleaned_data['ad_email']
+                request.session['qtz-remember-storage']=form.cleaned_data['ad_remember']
+            else:
+                request.session['qtz-email-storage']=None
+                request.session['qtz-remember-storage']=None
+            print(form.cleaned_data)
             return HttpResponseRedirect('/home')
     else:
-        form=LoginForm()
+        try:
+            ad_email=request.session['qtz-email-storage']
+            ad_remember=request.session['qtz-remember-storage']
+        except:
+            ad_email=""
+            ad_remember=False
+        form=LoginForm(initial={'ad_email':ad_email,'ad_remember':ad_remember})
     return render(request,'core/login.html',{'form':form})
 
 @csrf_protect
