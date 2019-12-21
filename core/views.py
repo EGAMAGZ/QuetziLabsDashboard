@@ -22,7 +22,6 @@ def login(request):
             else:
                 request.session['qtz-email-storage']=None
                 request.session['qtz-remember-storage']=None
-            print(form.cleaned_data)
             return HttpResponseRedirect('/home')
     else:
         try:
