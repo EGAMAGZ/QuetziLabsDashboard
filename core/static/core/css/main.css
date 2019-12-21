@@ -25,6 +25,10 @@ body {
   background-color: var(--accent-color) !important;
 }
 
+.qtz-background-accent-dark{
+  background-color: var(--accent-color-dark) !important;
+}
+
 .qtz-background{
   background-color: var(--background-color) !important;
 }
@@ -44,6 +48,14 @@ body {
   color: var(--primary-color) !important;
 }
 
+.qtz-text-color-accent{
+  color: var(--accent-color) !important;
+}
+
+.qtz-text-color-accent-dark{
+  color: var(--accent-color-dark) !important;
+}
+
 .qtz-main-font {
   font-family: var(--main-font) !important;
 }
@@ -52,10 +64,18 @@ body {
   background-color: var(--accent-color) !important;
 }
 
+/* ----- HTML Elements ----- */
+
 /* Button */
 .qtz-btn-accent{
   background-color: var(--accent-color) !important;
 }
 .qtz-btn-accent:hover{
   background-color: var(--accent-color-dark) !important;
+}
+
+/* ----- Custom HTML Elements ----- */
+.qtz-card{
+  border-radius:0 !important;
+  border: 0 !important;
 }

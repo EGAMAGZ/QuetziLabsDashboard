@@ -19,9 +19,10 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
     {% block custom-static %}{% endblock %}
-    <title>QuetziLabs Admin {% block path %}{% endblock %}</title>
+    <title>QuetziLabs Dashboard {% block path %}{% endblock %}</title>
 </head>
 <body>
     {% block content %}{% endblock %}
+    {% block custom-js %}{% endblock %}
 </body>
 </html>

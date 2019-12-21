@@ -2,30 +2,45 @@
 
 {% load static %}
 
-{% block path %}| Log In{% endblock %}
+{% block path %}| Login{% endblock %}
+
+{% block custom-static %}
+<link rel="stylesheet" href="{% static 'core/css/login.css' %}">
+{% endblock %}
 
 {% block form-content %}
-<h2 class="text-center font-weight-bold"><i class="qtz-text-highlight-accent qtz-text-no-style p-1">Log</i> In</h2>
-<div class="w-75">
-    <form action="{% url 'login' %}" method="post" class="p-4 card mx-5 my-1">
-        <div class="form-group">
-            <label for="{{ form.ad_email.id_for_label }}">Email address:</label>
-            {{ form.ad_email }}
-            <small class="form-text text-muted">If you don't have an account, you can <a href="#" class="font-weight-bold qtz-text-color-primary">register</a></small>
-            {% if form.ad_email.errors %}<small class="form-text text-danger">{{ form.ad_email.errors }}</small>{% endif %}
+
+<div class="card w-50 p-4 qtz-card">
+    <div class="card-body">
+        <div class="card-title d-flex flex-row">
+            <img src="{% static 'core/img/quetziLogo.svg' %}" width="36" height="48">
+            <p class="text-muted p-1">
+                <i class="qtz-text-highlight-accent qtz-text-no-style p-1 text-dark qtz-main-font">Quetzi</i>
+                <i class="qtz-text-no-style qtz-main-font">Lab</i>
+            </p>
         </div>
-        <div class="form-group">
-            <label for="{{ form.ad_password.id_for_label }}">Password:</label>
-            {{ form.ad_password }}
-            {% if form.ad_password.errors %}<small class="form-text text-danger">{{ form.ad_password.errors }}</small>{% endif %}
-            <a href="#"><small class="form-text font-weight-bold qtz-text-color-primary">Forgotten account?</small></a>
-        </div>
-        <input type="submit" value="Log In" class="btn btn-info">
-        {% csrf_token %}
-    </form>
-    
+        <form action="{% url 'login' %}" method="post" class="">
+            <div class="form-group w-auto">
+                <small id="id_ad_email_errors" class="form-text text-danger">{{ form.ad_email.errors }}</small>
+                <label for="{{ form.ad_email.id_for_label }}" class="font-weight-bold"><h3>Iniciar Sesion</h3> </label>
+                {{ form.ad_email }}
+                <small class="form-text text-muted">If you don't have an account, you can <a href="#" class="font-weight-bold qtz-text-no-style qtz-text-color-primary">register</a></small>
+                <button type="button" id="next-btn" class="btn btn-info">Siguiente</button>
+            </div>
+            <div class="form-group w-auto" style="display: none;">
+                <label for="{{ form.ad_password.id_for_label }}">Password:</label>
+                {{ form.ad_password }}
+                {% if form.ad_password.errors %}<small class="form-text text-danger">{{ form.ad_password.errors }}</small>{% endif %}
+                <a href="#"><small class="form-text font-weight-bold qtz-text-color-primary">Forgotten password?</small></a>
+                <input type="submit" value="Log In" class="btn btn-info">
+            </div>
+            {% csrf_token %}
+        </form>
+    </div>
 </div>
-<div>
-    © 2019-2021
-</div>
+
+{% endblock %}
+
+{% block custom-js %}
+<script src="{% static 'core/js/login.js' %}"></script>
 {% endblock %}
