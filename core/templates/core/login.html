@@ -21,12 +21,12 @@
         </div>
         <form action="{% url 'login' %}" method="post" class="">
             <div class="form-group w-auto">
-                <small id="id_ad_email_errors" class="form-text text-danger">{{ form.ad_email.errors }}</small>
-                <label for="{{ form.ad_email.id_for_label }}" class="font-weight-bold"><h3>Iniciar Sesion</h3> </label>
+                <label for="{{ form.ad_email.id_for_label }}" class="font-weight-bold"><h3>Iniciar Sesión</h3></label>
                 {{ form.ad_email }}
                 <small class="form-text text-muted">Si no tienes una cuenta, puedes <a href="#" class="font-weight-bold qtz-text-no-style qtz-text-color-primary">registrarte</a></small>
+                <small id="id_ad_email_errors" class="form-text text-danger">{{ form.ad_email.errors }}</small>
                 <div class="d-flex flex-row justify-content-end p-1 w-100">
-                    <button type="button" id="next-btn" class="btn btn-info qtz-btn-accent text-dark">Siguiente</button>
+                    <button type="button" id="next-btn" class="btn btn-info qtz-btn-accent text-dark rounded-0">Siguiente</button>
                 </div>
             </div>
             <div class="form-group w-auto" style="display: none;">

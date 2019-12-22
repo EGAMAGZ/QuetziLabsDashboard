@@ -6,6 +6,7 @@
   --accent-color: #c3f7eb;
   --accent-color-dark:#88D9F3;
   --background-color:#FBF9F3;
+  --background-color-dark:#e8e6e1;
   /* FONTS */
   --main-font: "Quicksand", sans-serif;
 }
@@ -54,6 +55,10 @@ body {
 
 .qtz-text-color-accent-dark{
   color: var(--accent-color-dark) !important;
+}
+
+.qtz-text-color-background{
+  color:var(--background-color);
 }
 
 .qtz-main-font {
