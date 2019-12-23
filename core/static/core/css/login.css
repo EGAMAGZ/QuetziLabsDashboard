@@ -34,7 +34,7 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     #login-card {
-        width: 100%;
+        width: 60%;
         height: auto;
     }
 }

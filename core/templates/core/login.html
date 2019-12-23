@@ -10,13 +10,13 @@
 
 {% block form-content %}
 
-<div class="card p-3 qtz-card" id="login-card">
+<div class="card p-2 qtz-card" id="login-card">
     <div class="card-body">
         <div class="card-title d-flex flex-row">
             <img src="{% static 'core/img/quetziLogo.svg' %}" width="36" height="48">
             <p class="text-muted p-1">
                 <i class="qtz-text-highlight-accent qtz-text-no-style p-1 text-dark qtz-main-font">Quetzi</i>
-                <i class="qtz-text-no-style qtz-main-font">Lab</i>
+                <i class="qtz-text-no-style qtz-main-font">Lab Dashboard</i>
             </p>
         </div>
         <form action="{% url 'login' %}" method="post" class="">
@@ -26,7 +26,7 @@
                 <small class="form-text text-muted">Si no tienes una cuenta, puedes <a href="#" class="font-weight-bold qtz-text-no-style qtz-text-color-primary">registrarte</a></small>
                 <small id="id_ad_email_errors" class="form-text text-danger">{{ form.ad_email.errors }}</small>
                 <div class="d-flex flex-row justify-content-end p-1 w-100">
-                    <button type="button" id="next-btn" class="btn btn-info qtz-btn-accent text-dark rounded-0">Siguiente</button>
+                    <button type="button" id="next-btn" class="btn qtz-btn-accent text-dark rounded-0">Siguiente</button>
                 </div>
             </div>
             <div class="form-group w-auto" style="display: none;">
@@ -39,7 +39,7 @@
                 </div>
                 <a href="#"><small class="form-text font-weight-bold qtz-text-color-primary">¿Olvidaste tu contraseña?</small></a>
                 <div class="d-flex flex-row justify-content-end p-1 w-100">
-                    <input type="submit" value="Iniciar sesión" class="btn btn-info qtz-btn-accent text-dark">
+                    <input type="submit" value="Iniciar sesión" class="btn qtz-btn-accent text-dark">
                 </div>
             </div>
             {% csrf_token %}
