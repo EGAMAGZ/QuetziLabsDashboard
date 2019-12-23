@@ -41,8 +41,12 @@ body {
 
 /* Text */
 
-.qtz-text-no-style {
+.qtz-text-no-font {
   font-style: normal !important;
+}
+
+.qtz-text-no-decoration{
+  text-decoration: none !important;
 }
 
 .qtz-text-color-primary {
@@ -98,7 +102,12 @@ body {
   transform: scaleX(0);
   transition: .25s linear;
 }
+
 .qtz-nav-link:hover::before, .qtz-nav-link:focus:before{
   visibility: visible;
   transform: scaleX(1);
+}
+
+.errorlist{
+  list-style-type:none;
 }

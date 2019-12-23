@@ -11,7 +11,7 @@ next_btn.onclick=function(){
         forms[0].style.display="none";
         forms[1].style.display="block";
     }else{
-        errors_email.innerHTML="<ul><li>Enter a valid email address.</li></ul>";
+        errors_email.innerHTML='<ul class="errorlist"><h6>Error en valores introducidos:</h6><li>Enter a valid email address.</li></ul>';
     }
 };
 

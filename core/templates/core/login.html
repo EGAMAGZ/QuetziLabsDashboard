@@ -13,18 +13,23 @@
 <div class="card p-2 qtz-card" id="login-card">
     <div class="card-body">
         <div class="card-title d-flex flex-row">
-            <img src="{% static 'core/img/quetziLogo.svg' %}" width="36" height="48">
-            <p class="text-muted p-1">
-                <i class="qtz-text-highlight-accent qtz-text-no-style p-1 text-dark qtz-main-font">Quetzi</i>
-                <i class="qtz-text-no-style qtz-main-font">Lab Dashboard</i>
-            </p>
+            <a href="{% url 'home-page' %}"><img src="{% static 'core/img/quetziLogo.svg' %}" width="36" height="48" alt=""></a>
+            <a href="{% url 'home-page' %}" class="qtz-text-no-decoration">
+                <p class="text-muted p-1">
+                    <i class="qtz-text-highlight-accent qtz-text-no-font p-1 text-dark qtz-main-font">Quetzi</i>
+                    <i class="qtz-text-no-font qtz-main-font">Lab Dashboard</i>
+                </p>
+            </a>
         </div>
         <form action="{% url 'login' %}" method="post" class="">
             <div class="form-group w-auto">
                 <label for="{{ form.ad_email.id_for_label }}" class="font-weight-bold"><h3>Iniciar Sesión</h3></label>
                 {{ form.ad_email }}
-                <small class="form-text text-muted">Si no tienes una cuenta, puedes <a href="#" class="font-weight-bold qtz-text-no-style qtz-text-color-primary">registrarte</a></small>
-                <small id="id_ad_email_errors" class="form-text text-danger">{{ form.ad_email.errors }}</small>
+                <small class="form-text text-muted">Si no tienes una cuenta, puedes <a href="#" class="font-weight-bold qtz-text-no-font qtz-text-color-primary">registrarte</a></small>
+                <small id="id_ad_email_errors" class="form-text text-danger font-weight-bold">
+                    {% if form.ad_email.errors %}<h6>Error en valores introducidos:</h6>{% endif %}
+                    {{ form.ad_email.errors }}
+                </small>
                 <div class="d-flex flex-row justify-content-end p-1 w-100">
                     <button type="button" id="next-btn" class="btn qtz-btn-accent text-dark rounded-0">Siguiente</button>
                 </div>
