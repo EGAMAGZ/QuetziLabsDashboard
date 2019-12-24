@@ -5,9 +5,64 @@ body{
 }
 
 #header{
-    background: url('../img/working-woman-person-technology-7375.jpg');
+    background: url('../img/man-holding-mug-in-front-of-laptop-842548.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+}
+
+#header-title{
+    width: 100%;
+}
+
+#header-title span{
+    font-size: 6rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width:300px){
+    #header-title {
+        width: auto;
+    }
+    #header-title span{
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 576px) {
+    #header-title {
+        width: auto;
+    }
+    #header-title span{
+        font-size: 3.5rem;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #header-title {
+        width: 100%;
+    }
+    #header-title span{
+        font-size: 4.5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #header-title {
+        width: 100%;
+    }
+    #header-title span{
+        font-size: 5.5rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #header-title {
+        width: 100%;
+    }
+    
+    #header-title span{
+        font-size: 6.5rem;
+    }
 }
