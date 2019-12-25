@@ -3,7 +3,24 @@
 
 {% block path %}| Contact{% endblock %}
 
+
+{% block custom-static %}
+<link rel="preload" href="{% static 'core/css/contact.css' %}"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{% static 'core/css/contact.css' %}">
+        </noscript>
+{% endblock %}
+
 {% block homepage-content %}
-Contacto
+<section id="header" class="vh-100 vw-100 d-flex align-items-end flex-column justify-content-end">
+    
+    <div class="d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row align-items-center card qtz-card p-4 bg-white border-0">
+        <div>
+            <h1 class="display-5 text-break qtz-text-color-primary">Contactanos: Estamos aqui para ti 24/7</h1>
+            <p>Estamos aqui para ti, cualquier cosa, desde responder cualquier pregunta hasta resolver cualquier problema, en cualquier momento.</p>
+        </div>
+    </div>
+</section>
 {% csrf_token %}
 {% endblock %}

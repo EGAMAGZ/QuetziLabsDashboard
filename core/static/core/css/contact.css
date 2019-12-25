@@ -1,0 +1,12 @@
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transform-style: preserve-3d;
+}
+
+#header{
+    background: url('../img/people-meeting-workspace-team-7097.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
