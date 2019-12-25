@@ -1,0 +1,15 @@
+{% extends 'core/access.html' %}
+
+{% load static %}
+
+{% block path %} | Registrarte{% endblock %}
+
+{% block custom-static %}
+<link rel="stylesheet" href="{% static 'core/css/register.css' %}">
+{% endblock %}
+
+{% block form-content %}
+<div class="card qtz-card" id="register-card">
+    <h2>Registro</h2>
+</div>
+{% endblock %}
