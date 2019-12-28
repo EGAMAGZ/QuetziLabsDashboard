@@ -6,16 +6,16 @@ except ImportError:
     print("Error al importar libreria")
 import datetime
 
-import QuetziLabsDashboard.settings as settings
+from django.conf import settings
 
-class generateJWT():
+class JWTtool():
 
     def __init__(self):
         self.SEED=settings.SEED_KEY
         self.algorithm='HS256'
     
     def encodeJWT(self,admin):
-        token_encoded=encode({'exp':datetime.datetime.utcnow() + datetime.timedelta(hours=1),'admin':admin},self.SEED,algorithm=self.algorithm)
+        token_encoded=encode({'exp':datetime.datetime.utcnow() + datetime.timedelta(days=1),'ql-admin-info':admin},self.SEED,algorithm=self.algorithm)
         return token_encoded
     
     def decodeJWT(self,token_encoded):
