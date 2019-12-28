@@ -17,6 +17,14 @@ pip install -r requeriments.txt
 |   Django   | django | 3.0 |
 |PyJWT|pyjwt|1.7.1|
 
+### Execute apps' settings (views,models for databases,changes in settings.py,etc) [before running]
+```
+manage.py makemigrations
+```
+```
+manage.py migrate
+```
+
 ### Start server
 
 **Windows**

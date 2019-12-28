@@ -1,0 +1,5 @@
+[client]
+database = ql_database
+user = root
+password = root
+default-character-set = utf8

@@ -16,6 +16,10 @@ body {
   height: 100%;
 }
 
+.qtz-min-width-50{
+  min-width: 50%;
+}
+
 /* Background */
 
 .qtz-background-primary {
