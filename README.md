@@ -17,7 +17,7 @@ pip install -r requeriments.txt
 |   Django   | django | 3.0.1 |
 |PyJWT|pyjwt|1.7.1|
 |MYSQL Client|mysqlclient|1.4.6|
-### Execute apps' settings (views,models for databases,changes in settings.py,etc) [before running]
+### Ejecutar configuracion de apps (views,modelos para bases de datos,cambios en settings.py,etc) [antes de correr el servidor]
 ```
 manage.py makemigrations
 ```
@@ -25,7 +25,7 @@ manage.py makemigrations
 manage.py migrate
 ```
 
-### Start server
+### Iniciar servidor
 
 **Windows**
 ```
