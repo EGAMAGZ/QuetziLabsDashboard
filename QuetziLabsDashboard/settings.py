@@ -129,3 +129,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+
+import json
+with open('countries.json') as file:
+    COUNTRIES_CODE=json.load(file)

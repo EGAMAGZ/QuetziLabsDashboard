@@ -31,6 +31,8 @@ def login(request):
             ad_email=""
             ad_remember=False
         form=LoginForm(initial={'ad_email':ad_email,'ad_remember':ad_remember})
+    # from django.conf import settings
+    # print(settings.COUNTRIES_CODE)
     return render(request,'core/login.html',{'form':form})
 
 @csrf_protect
