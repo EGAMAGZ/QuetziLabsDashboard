@@ -14,9 +14,9 @@ pip install -r requeriments.txt
 
 |   Nombre   |   pip install   |   version   |
 |------|:----:|-----:|
-|   Django   | django | 3.0 |
+|   Django   | django | 3.0.1 |
 |PyJWT|pyjwt|1.7.1|
-
+|MYSQL Client|mysqlclient|1.4.6|
 ### Execute apps' settings (views,models for databases,changes in settings.py,etc) [before running]
 ```
 manage.py makemigrations
