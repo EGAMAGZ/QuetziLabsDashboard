@@ -82,6 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS':{
             'read_default_file':'database.cnf',
+            'init_command':'CREATE DATABASE IF NOT EXISTS ql_database'
         },
     }
 }

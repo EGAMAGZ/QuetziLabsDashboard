@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.hashers import make_password
 
-from .form import LoginForm
+from .form import LoginForm,RegisterForm
 from .models import QL_FREE_DT
 from qtz_tools.jwtConfig import JWTtool
 
@@ -47,7 +47,16 @@ def login(request):
 @csrf_protect
 @xframe_options_deny
 def register(request):
-    return render(request,'core/register.html')
+    custom_errors={}
+    if(request.method=="POST"):
+        form=RegisterForm(request.POST)
+        if(form.is_valid()):
+            request.session['qtz-email-storage']=form.cleaned_data['ad_email']
+            request.session['qtz-remember-storage']=form.cleaned_data['ad_remember']
+            return HttpResponseRedirect('/login')
+    else:
+        form=RegisterForm()
+    return render(request,'core/register.html',{'form':form,'custom_errors':custom_errors})
 
 @csrf_protect
 @xframe_options_deny
