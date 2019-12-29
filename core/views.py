@@ -2,6 +2,7 @@ from django.views.decorators.csrf import csrf_exempt,csrf_protect
 from django.views.decorators.clickjacking import xframe_options_deny
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.contrib.auth.hashers import make_password
 
 from .form import LoginForm
 from .models import QL_FREE_DT
@@ -28,10 +29,11 @@ def login(request):
                 request.session['qtz-remember-storage']=None
             try:
                 db_model=QL_FREE_DT.objects.get(ql_free_email=form.cleaned_data['ad_email'])
-                print(db_model)
+                # print(db_model)
                 return HttpResponseRedirect('/home')
             except QL_FREE_DT.DoesNotExist:
                 custom_errors['login_error']="Esta cuenta no existe"
+                # print(make_password(form.cleaned_data['ad_password']))
     else:
         try:
             ad_email=request.session['qtz-email-storage']
