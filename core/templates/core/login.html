@@ -28,6 +28,7 @@
                 <small class="form-text text-muted">Si no tienes una cuenta, puedes <a href="#" class="font-weight-bold qtz-text-no-font qtz-text-color-primary">registrarte</a></small>
                 <small id="id_ad_email_errors" class="form-text text-danger font-weight-bold">
                     {% if custom_errors.login_error %}<h6>{{ custom_errors.login_error }}</h6>{% endif %}
+                    {% if custom_errors.password_error %}<h6>{{ custom_errors.password_error }}</h6>{% endif %}
                     {% if form.ad_email.errors %}<h6>Error en valores introducidos:</h6>{% endif %}
                     {{ form.ad_email.errors }}
                 </small>

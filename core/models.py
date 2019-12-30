@@ -23,7 +23,7 @@ class QL_FREE_DT(models.Model):
     ql_free_img_link=models.ImageField(upload_to="freelance-profile-picture")
     ql_free_name=models.CharField(max_length=60)
     ql_free_email=models.EmailField(max_length=254,unique=True)
-    ql_free_pass=models.CharField(max_length=64)#hash256 max_length=64 bcrypt hash256 lenght=50
+    ql_free_pass=models.CharField(max_length=254)#hash256 max_length=64 bcrypt hash256 lenght=50
     ql_free_username=models.CharField(max_length=30,unique=True)
     ql_free_gender = models.CharField(max_length=1, choices=GENDER, default="M")
 
