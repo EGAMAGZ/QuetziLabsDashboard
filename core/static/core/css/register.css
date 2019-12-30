@@ -10,6 +10,12 @@
     height: auto;
 }
 
+#profile-img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width:300px){
     #register-card {
