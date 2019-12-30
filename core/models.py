@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 class QL_USR_DT(models.Model):
     GENDER = (
-    ("M","Male"),
-    ("F","Female"),
+        ("M","Hombre"),
+        ("F","Mujer"),
     )
     ql_usr_img_link=models.ImageField(upload_to="user-profile-picture")
     ql_usr_name=models.CharField(max_length=60)
@@ -17,8 +17,8 @@ class QL_USR_DT(models.Model):
 
 class QL_FREE_DT(models.Model):
     GENDER = (
-        ("M","Male"),
-        ("F","Female"),
+        ("M","Hombre"),
+        ("F","Mujer"),
     )
     ql_free_img_link=models.ImageField(upload_to="freelance-profile-picture")
     ql_free_name=models.CharField(max_length=60)
