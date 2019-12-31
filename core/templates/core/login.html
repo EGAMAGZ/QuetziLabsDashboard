@@ -25,7 +25,7 @@
             <div class="form-group w-auto">
                 <label for="{{ form.ad_email.id_for_label }}" class="font-weight-bold"><h3>Iniciar Sesión</h3></label>
                 {{ form.ad_email }}
-                <small class="form-text text-muted">Si no tienes una cuenta, puedes <a href="#" class="font-weight-bold qtz-text-no-font qtz-text-color-primary">registrarte</a></small>
+                <small class="form-text text-muted">Si no tienes una cuenta, puedes <a href="{% url 'register' %}" class="font-weight-bold qtz-text-no-font qtz-text-color-primary">registrarte</a></small>
                 <small id="id_ad_email_errors" class="form-text text-danger font-weight-bold">
                     {% if custom_errors.login_error %}<h6>{{ custom_errors.login_error }}</h6>{% endif %}
                     {% if custom_errors.password_error %}<h6>{{ custom_errors.password_error }}</h6>{% endif %}

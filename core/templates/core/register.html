@@ -21,7 +21,7 @@
                 </p>
             </a>
         </div>
-        <form action="{% url 'register' %}" method="post">
+        <form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
             <div class="form-group w-auto">
                 <label for="{{ form.ad_email.id_for_label }}" class="font-weight-bold">
                     <h2>Registrarte</h2>

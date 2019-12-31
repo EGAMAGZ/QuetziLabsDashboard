@@ -29,6 +29,7 @@ def login(request):
                 request.session['qtz-remember-storage']=None
             try:
                 db_model=QL_FREE_DT.objects.get(ql_free_email=form.cleaned_data['ad_email'])
+                print(db_model.ql_free_img_link)
                 if(check_password(form.cleaned_data['ad_password'],db_model.ql_free_pass)):
                     return HttpResponseRedirect('/home')
                 else:
@@ -50,12 +51,11 @@ def login(request):
 def register(request):
     custom_errors={}
     if(request.method=="POST"):
-        form=RegisterForm(request.POST)
+        form=RegisterForm(request.POST,request.FILES)
         if(form.is_valid()):
             if(form.cleaned_data['ad_password'] == form.cleaned_data['ad_password_s']):
                 request.session['qtz-email-storage']=form.cleaned_data['ad_email']
                 request.session['qtz-remember-storage']=True
-                print(form.cleaned_data)
                 db_model=QL_FREE_DT(ql_free_img_link=form.cleaned_data['ad_profile'],ql_free_name=form.cleaned_data['ad_name'],
                     ql_free_email=form.cleaned_data['ad_email'],ql_free_pass=make_password(form.cleaned_data['ad_password']),
                     ql_free_username=form.cleaned_data['ad_username'],ql_free_gender=form.cleaned_data['ad_genre'])
@@ -63,6 +63,7 @@ def register(request):
                 return HttpResponseRedirect('/login')
             else:
                 custom_errors['dif-passwords']="Contraseñas no coinciden"
+        print(form.cleaned_data)
     else:
         form=RegisterForm()
     return render(request,'core/register.html',{'form':form,'custom_errors':custom_errors})
