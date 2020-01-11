@@ -22,6 +22,7 @@ import core
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('core.urls')),
+    path('account/',include('account.urls')),
     path('robots.txt',TemplateView.as_view(template_name="core/robots.txt", content_type='text/plain')),
     # url('robots.txt',TemplateView.as_view(template_name="core/robots.txt", content_type='text/plain')),
 ]
