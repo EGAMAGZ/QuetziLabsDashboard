@@ -1,0 +1,14 @@
+{
+    "name":"Quetzi Labs Dashboard",
+    "short_name":"DashBoard",
+    "display":"standalone",
+    "background_color":"#323846",
+    "description":"Quetzi Lab's Developer Side",
+    "icons":[
+        {
+            "src":"../img/quetziLogo.svg",
+            "type": "image/svg+xml",
+            "sizes":"any"
+        }
+    ]
+}
