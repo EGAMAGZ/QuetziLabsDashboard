@@ -1,5 +1,5 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 def account(request):
-    return HttpResponse("HOLA")
+    return render(request,'account/account.html')

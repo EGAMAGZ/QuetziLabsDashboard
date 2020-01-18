@@ -72,3 +72,10 @@ def register(request):
 @xframe_options_deny
 def contact(request):
     return render(request,'core/contact.html')
+
+def logout(request):
+    try:
+        del request.session['qtz-session']
+    except KeyError:
+        pass
+    return HttpResponseRedirect('/login')

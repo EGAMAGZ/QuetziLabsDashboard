@@ -1,14 +1,33 @@
-<ul class="nav flex-column qtz-background-primary position-absolute h-100">
+<ul class="nav qtz-vertical-nav flex-column qtz-background-primary vh-100" id="sidebar">
     <li class="nav-item">
-        <a class="nav-link {% if request.path == '/home/' %}active{% endif %}" href="{% url 'home' %}">Active</a>
+        <a class="nav-link qtz-text-color-background {% if request.path == '/account/' %}active{% endif %}" href="{% url 'account' %}">
+                <i class="large material-icons">account_circle</i>
+        </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {% if request.path == '/account/' %}active{% endif %}" href="{% url 'account' %}">Link</a>
+        <a class="nav-link qtz-text-color-background {% if request.path == '/home/' %}active{% endif %}" href="{% url 'home' %}">
+                <i class="large material-icons">home</i>
+        </a>
     </li>
     <li class="nav-item">
+        <a class="nav-link qtz-text-color-background"  href="#">
+            <i class="large material-icons">message</i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link qtz-text-color-background">
+            <i class="large material-icons">settings</i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="{% url 'logout' %}" class="nav-link qtz-text-color-background">
+            <i class="large material-icons">power_settings_new</i>
+        </a>
+    </li>    
+    <!-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
-    </li>
+    </li> -->
 </ul>
