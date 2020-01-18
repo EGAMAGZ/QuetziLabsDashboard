@@ -24,6 +24,7 @@ SECRET_KEY = '$3c9mwjvx$b9u!1rs126j5oemhexbj%ax^0i54em468=31=)cg'
 
 #SEED for JWT
 SEED_KEY="ayNNs*%LH6CBkjTj5k17!g$aZqj7CDXMzY^4Y&@t"
+JWT_ALGORITHM='HS256'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
