@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class QL_USR_DT(models.Model):
+class User_Data(models.Model):
     GENDER = (
         ("M","Hombre"),
         ("F","Mujer"),
@@ -15,7 +15,10 @@ class QL_USR_DT(models.Model):
 
     ql_usr_created=models.DateTimeField(auto_now_add=True)
 
-class QL_FREE_DT(models.Model):
+    class Meta:
+        db_table='ql_usr_dt'
+
+class Freelancer_Data(models.Model):
     GENDER = (
         ("M","Hombre"),
         ("F","Mujer"),
@@ -29,3 +32,6 @@ class QL_FREE_DT(models.Model):
 
     ql_free_desc=models.TextField(max_length=500,blank=True)
     ql_free_created=models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table='ql_free_dt'

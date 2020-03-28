@@ -16,6 +16,7 @@ class RegisterForm(forms.Form):
     ad_profile=forms.ImageField(label="profile image",widget=forms.FileInput(attrs={'class':'form-control-file',}),validators=[validators.validate_image_file_extension,],required=False)
     ad_name=forms.CharField(label="name",max_length=60,min_length=15,widget=forms.TextInput(attrs={'class':'form-control',}),required=True)
     ad_email=forms.EmailField(label="email",widget=forms.EmailInput(attrs={'class':'form-control','placeholder': 'ejemplo@correo.com'}),required=True,validators=[validators.validate_email,])
+    # TODO: Add Password Validator
     ad_password=forms.CharField(label="password",widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Contraseña'}),required=True,min_length=6)
     ad_password_s=forms.CharField(label="password",widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Confirmar Contraseña'}),required=True,min_length=6)
     ad_username=forms.CharField(min_length=6,max_length=30,widget=forms.TextInput(attrs={'class':'form-control','placeholder':'user1234'}),required=True)
